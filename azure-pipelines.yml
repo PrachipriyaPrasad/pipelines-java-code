@@ -16,7 +16,7 @@ jobs:
     steps:
       - script: |
           echo Building the project...
-          echo $(HELLO_WORLD)
+          echo "The value of HELLO_WORLD is: $(HELLO_WORLD)"
         displayName: 'Run Build Script'
 
   - job: Test
@@ -25,4 +25,5 @@ jobs:
     steps:
       - script: |
           echo Running tests...
+          echo "Using HELLO_WORLD variable: $(HELLO_WORLD)"
         displayName: 'Run Tests'
